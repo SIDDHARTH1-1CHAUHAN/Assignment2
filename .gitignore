@@ -1,0 +1,33 @@
+# =========================================
+# 🌳 GLOBAL GITIGNORE FOR BACKEND + FRONTEND
+# =========================================
+
+# --- Node / React frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.next/
+frontend/.cache/
+frontend/.env.local
+frontend/.env.production
+frontend/.DS_Store
+
+# --- .NET backend ---
+backend/**/bin/
+backend/**/obj/
+backend/**/projectmanager.db
+backend/**/projectmanager.sqlite
+backend/**/appsettings.*.json.user
+backend/**/*.user
+backend/**/*.suo
+backend/**/*.pdb
+backend/**/*.log
+
+# --- IDE / Editor configs ---
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
