@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { User, RegisterData, LoginData, Project, ProjectDetail, Task } from '../types';
 
-const API_BASE_URL = 'http://localhost:5074/api';
+const API_BASE_URL = 'https://project-manager-api-fe1o.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
