@@ -19,6 +19,7 @@ backend/**/obj/
 backend/**/projectmanager.db
 backend/**/projectmanager.sqlite
 backend/**/appsettings.*.json.user
+backend/**/appsettings.Development.json
 backend/**/*.user
 backend/**/*.suo
 backend/**/*.pdb

@@ -99,12 +99,12 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var context = services.GetRequiredService<ApplicationDbContext>();
-        context.Database.EnsureCreated();
+        context.Database.Migrate();
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred creating the DB.");
+        logger.LogError(ex, "An error occurred while migrating or initializing the database.");
     }
 }
 
