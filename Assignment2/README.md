@@ -190,8 +190,8 @@ Assignment2/
    dotnet run
    ```
 
-   ✅ **API runs at:** `http://localhost:5001`  
-   ✅ **Swagger UI:** `http://localhost:5001/swagger`
+   ✅ **API runs at:** `http://localhost:50XX`  
+   ✅ **Swagger UI:** `http://localhost:50XX/swagger`
 
 4. **Database:**
    - SQLite database (`projectmanager.db`) is created automatically
@@ -571,31 +571,6 @@ Priority = (DaysUntilDue × 10) - (EstimatedHours × 5)
 
 ---
 
-## 🧪 Testing the Smart Scheduler
-
-### Method 1: Using the Frontend UI (Recommended!)
-
-1. Start both servers (backend + frontend)
-2. Login to your account
-3. Open any project
-4. Click **"🎯 Smart Scheduler"** button
-5. Click **"Load Simple Example"**
-6. Click **"🚀 Generate Optimal Schedule"**
-7. ✅ See the results!
-
-### Method 2: Using Swagger UI (API Only)
-
-1. Open `http://localhost:5001/swagger`
-2. Login to get JWT token
-3. Click "Authorize" and enter `Bearer {token}`
-4. Find `/api/projects/{projectId}/schedule`
-5. Enter test data
-6. Execute
-
-**See:** [SMART_SCHEDULER_GUIDE.md](./SMART_SCHEDULER_GUIDE.md) for detailed API testing
-
----
-
 ## 🔒 Security Features
 
 - ✅ **Password Hashing** - SHA256 encryption
@@ -605,162 +580,6 @@ Priority = (DaysUntilDue × 10) - (EstimatedHours × 5)
 - ✅ **Protected API** - All user endpoints require auth
 - ✅ **Auto Token Refresh** - Axios interceptors
 - ✅ **401 Handling** - Auto-redirect to login
-
----
-
-## 📊 Development Time
-
-**Estimated:** 12-16 hours  
-**Breakdown:**
-- Backend API & Auth: 3-4 hours
-- Database & EF Core: 2-3 hours
-- Frontend Pages & Routing: 2-3 hours
-- Smart Scheduler API: 2-3 hours
-- **Smart Scheduler Frontend UI:** 2-3 hours (NEW!)
-- Testing & Polish: 1-2 hours
-
----
-
-## 💡 Key Learning Points
-
-### Backend
-- RESTful API design principles
-- JWT authentication implementation
-- Entity Framework Code-First approach
-- Repository/Service pattern
-- Dependency injection
-- Data validation
-- Error handling
-- **Graph algorithms (Kahn's Algorithm)**
-- **Topological sorting**
-
-### Frontend
-- React Hooks (useState, useEffect, useContext)
-- Protected routing
-- JWT token management
-- HTTP interceptors
-- Form validation
-- Responsive design
-- CSS animations
-- TypeScript types
-- **Complex form handling**
-- **Dynamic UI generation**
-- **Algorithm visualization**
-
----
-
-## 🐛 Troubleshooting
-
-### Smart Scheduler Issues
-
-**Issue: Can't see Smart Scheduler button**
-**Solution:** Make sure you're viewing a project detail page (not dashboard)
-
-**Issue: Circular dependency not detected**
-**Solution:** This is working correctly - the algorithm detects them and shows error
-
-**Issue: Tasks don't appear in order**
-**Solution:** The order is based on dependencies first, then due dates
-
-### General Issues
-
-**Backend not starting:**
-```bash
-# Delete database and restart
-rm projectmanager.db
-dotnet run
-```
-
-**Frontend build errors:**
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
-
-**Tasks not updating/deleting:**
-- This was a routing issue - now **FIXED**!
-- Make sure you're using the latest code
-
----
-
-## ✅ Features Checklist
-
-### Core Requirements ✓
-- [x] User registration and login with JWT
-- [x] User-specific data access
-- [x] Create, view, and delete projects
-- [x] Add, update, and delete tasks
-- [x] Toggle task completion
-- [x] Entity Framework Core with SQLite
-- [x] Data validation with DataAnnotations
-- [x] Separation of concerns (DTOs, Services, Models)
-- [x] React Router for navigation
-- [x] Protected routes
-- [x] Form validation and error handling
-- [x] JWT token storage and reuse
-
-### Enhancement Features ✓
-- [x] Loading indicators throughout app
-- [x] User feedback messages
-- [x] Mobile-friendly design (320px+)
-- [x] Smooth animations and transitions
-- [x] Progress visualization
-- [x] Due date tracking
-- [x] Overdue task indicators
-- [x] Empty state designs
-
-### Bonus Feature ✓
-- [x] Smart Scheduler API
-- [x] Kahn's Algorithm implementation
-- [x] Topological sort
-- [x] Dependency resolution
-- [x] Priority-based scheduling
-- [x] Circular dependency detection
-- [x] **Frontend UI for Smart Scheduler** (NEW!)
-- [x] Interactive task builder
-- [x] Visual results display
-- [x] Example scenarios
-- [x] Mobile responsive scheduler
-- [x] Print functionality
-
----
-
-## 📚 Additional Documentation
-
-- **[SMART_SCHEDULER_GUIDE.md](./SMART_SCHEDULER_GUIDE.md)** - API testing guide
-- **[BUGFIX_TASKS_CONTROLLER.md](./BUGFIX_TASKS_CONTROLLER.md)** - Task controller fix details
-- **[UPDATES_SUMMARY.md](./UPDATES_SUMMARY.md)** - All enhancements summary
-- **[FIX_APPLIED.md](./FIX_APPLIED.md)** - Quick fix reference
-
----
-
-## 🎉 What Makes This Special
-
-### 🌟 Beyond Requirements
-
-Most assignments provide only:
-- ✅ Backend API endpoint
-- ❌ Manual testing with Swagger/Postman
-
-**We've gone further:**
-- ✅ Backend API with Kahn's Algorithm
-- ✅ **Complete frontend interface**
-- ✅ Interactive task builder
-- ✅ Visual dependency selector
-- ✅ Beautiful results display
-- ✅ Example scenarios
-- ✅ Mobile responsive
-- ✅ Print functionality
-
-### 🧠 Real-World Application
-
-This isn't just an academic exercise:
-
-- ✅ **Production-ready code** - Clean, maintainable, documented
-- ✅ **Industry-standard algorithm** - Kahn's Algorithm used in real tools
-- ✅ **Professional UI** - Polished, user-friendly interface
-- ✅ **Complete solution** - Frontend + Backend integration
-- ✅ **Best practices** - Error handling, loading states, validation
 
 ---
 
@@ -788,27 +607,6 @@ npm run dev
 
 ---
 
-## 📸 Screenshots / What You'll See
-
-### Dashboard:
-- Clean project cards with progress bars
-- Task completion statistics
-- Mobile-responsive layout
-
-### Project Detail:
-- Task list with checkboxes
-- Progress visualization
-- **"🎯 Smart Scheduler" button in header** ← NEW!
-
-### Smart Scheduler:
-- **Interactive task builder** with forms
-- **Dependency checkboxes** for easy selection
-- **Visual results** in numbered cards
-- **Example scenario buttons**
-- **Print-friendly layout**
-
----
-
 ## 🏆 Summary
 
 **Assignment 2** is a complete, production-ready project manager with:
@@ -828,16 +626,3 @@ npm run dev
 🧠 **Kahn's Algorithm** - Industry-standard topological sorting  
 ✨ **Professional Polish** - Loading states, animations, error handling  
 📱 **Fully Responsive** - Works on any device  
-📚 **Comprehensive Documentation** - Multiple guides and READMEs  
-
-**Ready to run, test, and impress!** 🚀
-
----
-
-[**🎯 View Smart Scheduler Frontend**](computer:///mnt/user-data/outputs/TaskManagerAssignments/Assignment2/Frontend/src/pages/SmartScheduler.tsx)
-
-[**🧠 View Kahn's Algorithm Implementation**](computer:///mnt/user-data/outputs/TaskManagerAssignments/Assignment2/Backend/Services/SmartSchedulerService.cs)
-
-[**📖 View API Testing Guide**](computer:///mnt/user-data/outputs/TaskManagerAssignments/Assignment2/SMART_SCHEDULER_GUIDE.md)
-
-[**📦 View Complete Solution**](computer:///mnt/user-data/outputs/TaskManagerAssignments)
