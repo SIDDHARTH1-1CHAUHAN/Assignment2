@@ -163,9 +163,3 @@ Two complete full-stack applications:
 - **Fully documented** with multiple guides
 
 **Ready to run, test, and deploy!** 🚀
-
----
-
-**For detailed instructions, see the README in each assignment folder.**
-
-**Made with ❤️ using .NET 8, React, and Kahn's Algorithm**
